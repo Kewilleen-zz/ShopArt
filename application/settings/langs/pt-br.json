@@ -1,5 +1,8 @@
 {
 	"CATEGORIES": {
-		"NOTFOUND": "Categoria {category} não foi encontrada!"
+		"NOTFOUND": "A categoria {category} não foi encontrada!"
+	},
+	"PRODUCTS": {
+		"NOTFOUND": "O produto de número {productId} não foi encontrada!"
 	}
 }

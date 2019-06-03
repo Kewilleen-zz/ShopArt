@@ -28,6 +28,11 @@ class ShopController extends Controller
 			$productId = func_get_arg(2);
 			$qnt = func_get_arg(3);
 			if($this->category->hasCategory($categoryName)) {
+				if ($this->product->hasProductId($productId)) {
+					//stock
+				} else {
+					$data['error'] = str_replace("{productId}", $productId, $this->getLanguage()->getTranslation()->PRODUCTS->NOTFOUND);
+				}
 			} else {
 				$data['error'] = str_replace("{category}", $categoryName, $this->getLanguage()->getTranslation()->CATEGORIES->NOTFOUND);
 			}
